@@ -1,3 +1,4 @@
+#!/usr/bin/pyhton3
 #-*- coding: utf-8 -*-
 import urllib.request
 import json
@@ -28,7 +29,7 @@ for item in postData:
   response=urllib.request.urlopen(request)
   content=response.read()
 
-  result=json.loads(content)
+  result=json.loads(content.decode('utf-8'))
 
   price=result[0]
 
